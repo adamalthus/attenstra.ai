@@ -1,86 +1,19 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Attenstra.ai</title>
     <meta
       name="description"
-      content="In a world of fragmented attention, every second counts. Attenstra.ai."
+      content="Attenstra.ai"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="site-shell">
-      <header class="topbar minimal-topbar">
-        <a class="brand" href="#top" aria-label="Attenstra.ai home">
-          <span class="brand-mark">A</span>
-          <span class="brand-text">Attenstra.ai</span>
-        </a>
-      </header>
-
-      <main id="top">
-        <section class="minimal-hero">
-          <div class="minimal-hero-copy">
-            <p class="eyebrow">Attenstra.ai</p>
-            <h1>In a World of Fragmented Attention</h1>
-            <p class="minimal-punch">Every Second Counts</p>
-          </div>
-
-          <form
-            class="waitlist-form minimal-waitlist"
-            id="waitlist-form"
-            action=""
-            method="post"
-            data-contact-email="hello@attenstra.ai"
-            novalidate
-          >
-            <p class="waitlist-heading">Sign up to be in the loop</p>
-
-            <label>
-              <span class="sr-only">Email address</span>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autocomplete="email"
-                placeholder="you@company.com"
-                required
-              />
-            </label>
-
-            <label class="checkbox-row">
-              <input id="consent" name="consent" type="checkbox" required />
-              <span>I want to receive Attenstra.ai updates by email.</span>
-            </label>
-
-            <input type="hidden" name="tag" value="attenstra-website" />
-            <input type="hidden" name="metadata[source]" value="attenstra.ai" />
-
-            <button class="button button-primary button-wide" type="submit">
-              Sign up
-            </button>
-            <p class="form-status" id="form-status" aria-live="polite"></p>
-          </form>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <p>Attenstra.ai</p>
-        <div class="footer-links">
-          <a href="./privacy.html">Privacy</a>
-          <a href="mailto:hello@attenstra.ai">Contact</a>
-        </div>
-      </footer>
-    </div>
-
-    <script src="./site-config.js"></script>
-    <script src="./script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

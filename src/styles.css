@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+:root {
+  color-scheme: light;
+  --background: #e0d5c7;
+  --foreground: #3a3832;
+  --muted: #6b7280;
+  --surface: #ebe3d8;
+  --border: rgba(58, 56, 50, 0.12);
+  --primary: #6b7280;
+  --primary-foreground: #ebe3d8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 48px 24px;
+}
+
+.hero-shell {
+  width: min(100%, 960px);
+  margin: 0 auto;
+  min-height: calc(100vh - 96px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brandline {
+  margin: 0 0 48px;
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.hero {
+  display: grid;
+  gap: 56px;
+}
+
+.hero-copy {
+  display: grid;
+  gap: 28px;
+  justify-items: center;
+}
+
+.headline {
+  margin: 0;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.2rem, 5vw, 4.6rem);
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  max-width: 14ch;
+  text-wrap: balance;
+}
+
+.dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: rgba(58, 56, 50, 0.2);
+  cursor: pointer;
+  transition: all 160ms ease;
+}
+
+.dot.active {
+  width: 34px;
+  background: var(--primary);
+}
+
+.signup {
+  width: min(100%, 440px);
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.signup-label {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.email-input {
+  width: 100%;
+  min-height: 58px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--foreground);
+  padding: 0 18px;
+  text-align: center;
+  outline: none;
+}
+
+.email-input:focus {
+  border-color: rgba(58, 56, 50, 0.28);
+}
+
+.email-input::placeholder {
+  color: var(--muted);
+}
+
+.signup-button {
+  min-height: 58px;
+  border: none;
+  border-radius: 16px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 160ms ease;
+}
+
+.signup-button:hover {
+  opacity: 0.92;
+}
+
+.signup-status {
+  min-height: 1.4em;
+  margin: 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.footer {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding: 32px 18px;
+  }
+
+  .brandline {
+    margin-bottom: 36px;
+  }
+
+  .hero {
+    gap: 42px;
+  }
+
+  .headline {
+    font-size: clamp(2rem, 10vw, 3.6rem);
+  }
+
+  .footer {
+    margin-top: 48px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
