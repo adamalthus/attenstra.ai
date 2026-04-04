@@ -62,9 +62,9 @@ input {
 
 .intro-line {
   margin: 0;
-  color: var(--foreground);
+  color: #1a1a1a;
   font-family: "Inter", sans-serif;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
   font-weight: 600;
   letter-spacing: 0.01em;
 }
@@ -75,7 +75,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -1rem;
+  margin-top: -4rem;
 }
 
 .headline {
@@ -93,6 +93,18 @@ input {
 .signup-wrap {
   width: min(100%, 28rem);
   margin: 0 auto;
+}
+
+.subline-wrap {
+  text-align: center;
+}
+
+.subline {
+  margin: 0;
+  color: var(--muted);
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
 }
 
 .signup {
@@ -191,13 +203,17 @@ input {
 
   .headline-frame {
     min-height: 9rem;
-    margin-top: 0;
+    margin-top: -1.5rem;
   }
 
   .headline {
     max-width: 100%;
     white-space: normal;
     text-wrap: balance;
+  }
+
+  .subline {
+    font-size: 1.05rem;
   }
 
   .brand-footer {

@@ -65,6 +65,17 @@ export default function App() {
           </div>
 
           <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="subline-wrap"
+          >
+            <p className="subline">
+              Built for serious work in a world of fragmented attention.
+            </p>
+          </motion.div>
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -80,7 +91,7 @@ export default function App() {
                 className="email-input"
               />
               <button type="submit" className="signup-button">
-                {isSubmitted ? "Thank you!" : "Stay in the loop"}
+                {isSubmitted ? "Thank you!" : "Get updates"}
               </button>
             </form>
 
