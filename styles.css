@@ -34,7 +34,7 @@ body {
 .topbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-bottom: 28px;
 }
 
@@ -61,11 +61,10 @@ body {
 
 .minimal-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
-  gap: 64px;
-  align-items: end;
+  justify-items: center;
+  gap: 30px;
   min-height: calc(100vh - 180px);
-  padding: 18px 0 24px;
+  padding: 56px 0 24px;
 }
 
 .eyebrow {
@@ -85,30 +84,35 @@ h1,
 
 .minimal-hero-copy h1 {
   margin: 0;
-  font-size: clamp(4rem, 10vw, 8.5rem);
-  line-height: 0.88;
+  font-size: clamp(4rem, 9vw, 8rem);
+  line-height: 0.9;
   letter-spacing: -0.05em;
-  max-width: 7.8ch;
+  max-width: 9.4ch;
+  text-align: center;
 }
 
 .minimal-punch {
-  margin: 20px 0 0;
-  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  margin: 24px 0 0;
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
   line-height: 1;
   font-weight: 700;
   color: var(--accent);
+  text-align: center;
 }
 
 .minimal-waitlist {
   display: grid;
-  gap: 18px;
+  gap: 16px;
+  width: min(100%, 560px);
+  justify-items: center;
   padding-bottom: 10px;
 }
 
 .waitlist-heading {
   margin: 0;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   line-height: 1.05;
+  text-align: center;
 }
 
 .waitlist-form label {
@@ -116,17 +120,18 @@ h1,
   gap: 8px;
   font-weight: 700;
   font-size: 0.95rem;
+  width: 100%;
 }
 
 .waitlist-form input[type="email"] {
   width: 100%;
   border: 1px solid var(--line);
-  border-radius: 0;
-  padding: 16px 0;
-  background: transparent;
+  border-radius: 999px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.56);
   color: var(--text);
   font: inherit;
-  box-shadow: none;
+  text-align: center;
 }
 
 .waitlist-form input[type="email"]::placeholder {
@@ -143,10 +148,12 @@ h1,
   grid-template-columns: 20px 1fr;
   align-items: start;
   gap: 12px;
-  padding: 8px 0;
+  width: min(100%, 520px);
+  padding: 4px 0;
   font-weight: 500 !important;
   line-height: 1.5;
   color: var(--muted);
+  text-align: left;
 }
 
 .checkbox-row input {
@@ -187,7 +194,7 @@ h1,
 }
 
 .button-wide {
-  width: 100%;
+  width: min(100%, 260px);
 }
 
 .form-status {
@@ -215,6 +222,18 @@ h1,
   border-top: 1px solid rgba(18, 17, 14, 0.08);
   color: var(--muted);
   font-size: 0.94rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .footer-links {
@@ -261,15 +280,13 @@ h1,
 
 @media (max-width: 980px) {
   .minimal-hero {
-    grid-template-columns: 1fr;
     gap: 36px;
-    align-items: start;
     min-height: auto;
-    padding-top: 12px;
+    padding-top: 28px;
   }
 
   .minimal-hero-copy h1 {
-    max-width: 8.8ch;
+    max-width: 10ch;
   }
 }
 
@@ -286,7 +303,7 @@ h1,
 
   .minimal-hero-copy h1 {
     font-size: clamp(3.2rem, 17vw, 5.3rem);
-    max-width: 6.8ch;
+    max-width: 7ch;
   }
 
   .minimal-punch {
