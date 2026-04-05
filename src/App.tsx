@@ -111,7 +111,6 @@ export default function App() {
                 {isSubmitted ? "Thank you!" : "Get updates"}
               </button>
             </form>
-            <p className="signup-note">Early updates on Attenstra.</p>
             <p className="signup-status" aria-live="polite">
               {errorMessage || (isSubmitted ? "We’ll be in touch soon." : "")}
             </p>
