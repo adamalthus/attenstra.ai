@@ -115,7 +115,7 @@ export default function App() {
           transition={{ duration: 0.6 }}
           className="brand-footer"
         >
-          <h1>ATTENSTRA.AI</h1>
+          <img src="/attenstra-logo.svg" alt="Attenstra" className="brand-logo" />
         </motion.div>
       </main>
     </div>

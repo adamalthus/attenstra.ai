@@ -163,12 +163,11 @@ input {
   text-align: center;
 }
 
-.brand-footer h1 {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  font-size: 1.125rem;
-  letter-spacing: 0.05em;
-  font-weight: 500;
+.brand-logo {
+  width: min(100%, 25rem);
+  margin: 0 auto;
+  mix-blend-mode: multiply;
+  filter: contrast(1.1);
 }
 
 @media (max-width: 700px) {
@@ -197,5 +196,9 @@ input {
 
   .brand-footer {
     margin-top: 0;
+  }
+
+  .brand-logo {
+    width: min(100%, 18rem);
   }
 }
