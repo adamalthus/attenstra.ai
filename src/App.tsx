@@ -1,5 +1,6 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import attenstraLogo from "../assets/Attenstra_Woirdmark_LightBlue_Stream_Transparent_Background.png";
 
 const heroStatements = [
   "keeps what matters moving",
@@ -115,7 +116,7 @@ export default function App() {
           transition={{ duration: 0.6 }}
           className="brand-footer"
         >
-          <img src="/attenstra-logo.svg" alt="Attenstra" className="brand-logo" />
+          <img src={attenstraLogo} alt="Attenstra" className="brand-logo" />
         </motion.div>
       </main>
     </div>
