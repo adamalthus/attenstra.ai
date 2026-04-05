@@ -3,9 +3,9 @@ import { AnimatePresence, motion } from "motion/react";
 import attenstraLogo from "../assets/Attenstra_Woirdmark_LightBlue_Stream_Transparent_Background.png";
 
 const heroStatements = [
-  "Keep what matters moving.",
-  "Make focus your advantage.",
-  "Tools that work the way you do.",
+  "Keep what matters moving",
+  "Make focus your advantage",
+  "Tools that work the way you do",
 ];
 
 const buttondownEndpoint =
