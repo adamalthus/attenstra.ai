@@ -163,7 +163,7 @@ input {
 @media (max-width: 700px) {
   .shell {
     min-height: auto;
-    padding: 26px 18px 18px;
+    padding: 34px 18px 18px;
     justify-content: space-between;
   }
 
@@ -214,7 +214,7 @@ input {
 
 @media (max-width: 420px) {
   .shell {
-    padding: 24px 16px 16px;
+    padding: 32px 16px 16px;
   }
 
   .headline-frame {
