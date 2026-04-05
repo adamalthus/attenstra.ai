@@ -3,16 +3,20 @@ import { AnimatePresence, motion } from "motion/react";
 import attenstraLogo from "../assets/Attenstra_Woirdmark_LightBlue_Stream_Transparent_Background.png";
 
 const heroStatements = [
-  "keeps what matters moving",
-  "makes focus your advantage",
-  "powers serious work",
-  "works the way you do",
+  "Keep what matters moving.",
+  "Make focus your advantage.",
+  "Power serious work.",
+  "Work the way you do.",
 ];
+
+const buttondownEndpoint =
+  "https://buttondown.com/api/emails/embed-subscribe/attenstra";
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     const interval = window.setInterval(() => {
@@ -22,18 +26,40 @@ export default function App() {
     return () => window.clearInterval(interval);
   }, []);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setErrorMessage("");
 
     if (!email.trim()) {
+      setErrorMessage("Enter your email.");
       return;
     }
 
-    setIsSubmitted(true);
-    window.setTimeout(() => {
+    const body = new URLSearchParams();
+    body.set("email", email.trim());
+    body.set("tag", "attenstra-website");
+    body.set("metadata__source", "attenstra.ai");
+    body.set("embed", "1");
+
+    try {
+      const response = await fetch(buttondownEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        body: body.toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Buttondown returned ${response.status}`);
+      }
+
+      setIsSubmitted(true);
       setEmail("");
-      setIsSubmitted(false);
-    }, 3000);
+      window.setTimeout(() => setIsSubmitted(false), 3200);
+    } catch {
+      setErrorMessage("Subscription failed. Try again.");
+    }
   }
 
   return (
@@ -46,7 +72,7 @@ export default function App() {
             transition={{ duration: 0.6 }}
             className="intro"
           >
-            <p className="intro-line">Intelligence that</p>
+            <p className="intro-line">Attenstra</p>
           </motion.div>
 
           <div className="headline-frame">
@@ -71,9 +97,7 @@ export default function App() {
             className="subline-wrap"
           >
             <p className="subline">
-              In a world of fragmented attention
-              <br />
-              Make every second count
+              In a world of fragmented attention, make every second count.
             </p>
           </motion.div>
 
@@ -96,18 +120,11 @@ export default function App() {
                 {isSubmitted ? "Thank you!" : "Get updates"}
               </button>
             </form>
-
-            {isSubmitted ? (
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="signup-status"
-              >
-                We&apos;ll be in touch soon.
-              </motion.p>
-            ) : null}
+            <p className="signup-note">Early updates on Attenstra. No noise.</p>
+            <p className="signup-status" aria-live="polite">
+              {errorMessage || (isSubmitted ? "We’ll be in touch soon." : "")}
+            </p>
           </motion.div>
-
         </section>
 
         <motion.div
