@@ -5,8 +5,8 @@ import attenstraLogo from "../assets/Attenstra_Woirdmark_LightBlue_Stream_Transp
 const heroStatements = [
   "Keep what matters moving.",
   "Make focus your advantage.",
-  "Power serious work.",
-  "Work the way you do.",
+  "Serious work should not stall.",
+  "Your tools should work the way you do.",
 ];
 
 const buttondownEndpoint =
