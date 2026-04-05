@@ -48,6 +48,10 @@ Brand and social assets live in `assets/`.
 The repo currently uses the PNG wordmark as the source of truth for live brand
 rendering. A true vector master has not yet been established.
 
+`assets/` should now be treated as the canonical store for future brand and
+source assets, while `public/` should only hold runtime-ready files actually
+served by the site.
+
 ## Legacy implementation
 
 The original static-site implementation is preserved in:

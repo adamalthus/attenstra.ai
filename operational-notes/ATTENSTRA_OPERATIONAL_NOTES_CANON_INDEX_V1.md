@@ -11,3 +11,4 @@ This canon holds practical operating notes for Attenstra.ai.
 5. `operational-notes/ATTENSTRA_SITE_V1_LAUNCH_WORKFLOW_V1.md`
 6. `operational-notes/ATTENSTRA_PACE_BOP_CONTEXT_SUMMARY_V1.md`
 7. `operational-notes/ATTENSTRA_AGREED_HERO_STATEMENTS_V1.md`
+8. `operational-notes/ATTENSTRA_COMPETITIVE_POSITIONING_ANALYSIS_V1.md`
