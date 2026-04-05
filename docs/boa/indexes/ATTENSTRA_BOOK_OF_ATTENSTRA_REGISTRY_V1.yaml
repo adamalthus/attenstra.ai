@@ -1,0 +1,29 @@
+registry_id: ATTENSTRA-BOOK-OF-ATTENSTRA-REGISTRY-V1
+status: canon
+version: V1
+
+books:
+  - id: ATTENSTRA-BOOK-I-COMPANY-PURPOSE-AND-STRATEGIC-INTENT-V1
+    path: docs/boa/books/ATTENSTRA_BOOK_I_COMPANY_PURPOSE_AND_STRATEGIC_INTENT_V1.md
+    title: Attenstra Book I Company Purpose and Strategic Intent V1
+
+  - id: ATTENSTRA-BOOK-II-POSITIONING-AND-CATEGORY-STRATEGY-V1
+    path: docs/boa/books/ATTENSTRA_BOOK_II_POSITIONING_AND_CATEGORY_STRATEGY_V1.md
+    title: Attenstra Book II Positioning and Category Strategy V1
+
+  - id: ATTENSTRA-BOOK-III-PRODUCT-STRATEGY-AND-PORTFOLIO-MODEL-V1
+    path: docs/boa/books/ATTENSTRA_BOOK_III_PRODUCT_STRATEGY_AND_PORTFOLIO_MODEL_V1.md
+    title: Attenstra Book III Product Strategy and Portfolio Model V1
+
+  - id: ATTENSTRA-BOOK-IV-PRODUCT-MARKETING-AND-DISTRIBUTION-STRATEGY-V1
+    path: docs/boa/books/ATTENSTRA_BOOK_IV_PRODUCT_MARKETING_AND_DISTRIBUTION_STRATEGY_V1.md
+    title: Attenstra Book IV Product Marketing and Distribution Strategy V1
+
+  - id: ATTENSTRA-BOOK-V-CUSTOMER-ENGAGEMENT-AND-AUDIENCE-SYSTEM-V1
+    path: docs/boa/books/ATTENSTRA_BOOK_V_CUSTOMER_ENGAGEMENT_AND_AUDIENCE_SYSTEM_V1.md
+    title: Attenstra Book V Customer Engagement and Audience System V1
+
+handoff:
+  - id: ATTENSTRA-TO-PACE-ENGINEERING-HANDOFF-BRIDGE-V1
+    path: docs/boa/handoff/ATTENSTRA_TO_PACE_ENGINEERING_HANDOFF_BRIDGE_V1.md
+    title: Attenstra To PACE Engineering Handoff Bridge V1

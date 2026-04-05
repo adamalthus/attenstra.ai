@@ -77,3 +77,18 @@ Strategic and operational canon notes live in:
 
 These notes capture positioning, launch workflow, audience capture strategy,
 and related decisions that shape the public property.
+
+## Book of Attenstra
+
+The structured company canon now lives in:
+
+- `docs/boa/`
+
+Start rehydration from:
+
+- `docs/boa/indexes/ATTENSTRA_BOA_REHYDRATION_ENTRY_V1.md`
+
+Use the cross-repo engineering bridge when company-level work needs current
+product-system truth from `pace-governed-build`:
+
+- `docs/boa/handoff/ATTENSTRA_TO_PACE_ENGINEERING_HANDOFF_BRIDGE_V1.md`

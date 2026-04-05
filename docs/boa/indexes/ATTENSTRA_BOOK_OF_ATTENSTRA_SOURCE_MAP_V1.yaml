@@ -1,0 +1,36 @@
+source_map_id: ATTENSTRA-BOOK-OF-ATTENSTRA-SOURCE-MAP-V1
+status: canon
+version: V1
+
+legacy_sources:
+  - source: operational-notes/ATTENSTRA_WEB_PRESENCE_AND_AUDIENCE_CAPTURE_SUMMARY_V1.md
+    target: docs/boa/books/ATTENSTRA_BOOK_V_CUSTOMER_ENGAGEMENT_AND_AUDIENCE_SYSTEM_V1.md
+    role: audience_capture_and_subscription_strategy
+
+  - source: operational-notes/ATTENSTRA_HOSTING_SITE_STRATEGY_SUMMARY_V1.md
+    target: docs/boa/books/ATTENSTRA_BOOK_V_CUSTOMER_ENGAGEMENT_AND_AUDIENCE_SYSTEM_V1.md
+    role: public_property_hosting_and_distribution_infrastructure
+
+  - source: operational-notes/ATTENSTRA_FINALIZED_WEB_STACK_DECISION_V1.md
+    target: docs/boa/books/ATTENSTRA_BOOK_V_CUSTOMER_ENGAGEMENT_AND_AUDIENCE_SYSTEM_V1.md
+    role: approved_runtime_stack
+
+  - source: operational-notes/ATTENSTRA_LANDING_PAGE_DESIGN_TOOL_DECISION_V1.md
+    target: docs/boa/books/ATTENSTRA_BOOK_IV_PRODUCT_MARKETING_AND_DISTRIBUTION_STRATEGY_V1.md
+    role: design_workflow_choice
+
+  - source: operational-notes/ATTENSTRA_SITE_V1_LAUNCH_WORKFLOW_V1.md
+    target: docs/boa/books/ATTENSTRA_BOOK_IV_PRODUCT_MARKETING_AND_DISTRIBUTION_STRATEGY_V1.md
+    role: launch_workflow
+
+  - source: operational-notes/ATTENSTRA_PACE_BOP_CONTEXT_SUMMARY_V1.md
+    target: docs/boa/handoff/ATTENSTRA_TO_PACE_ENGINEERING_HANDOFF_BRIDGE_V1.md
+    role: engineering_context_bridge
+
+  - source: operational-notes/ATTENSTRA_AGREED_HERO_STATEMENTS_V1.md
+    target: docs/boa/books/ATTENSTRA_BOOK_IV_PRODUCT_MARKETING_AND_DISTRIBUTION_STRATEGY_V1.md
+    role: approved_hero_language
+
+  - source: operational-notes/ATTENSTRA_COMPETITIVE_POSITIONING_ANALYSIS_V1.md
+    target: docs/boa/books/ATTENSTRA_BOOK_II_POSITIONING_AND_CATEGORY_STRATEGY_V1.md
+    role: competitive_positioning_reference
