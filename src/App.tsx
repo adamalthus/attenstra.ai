@@ -10,7 +10,7 @@ const heroStatements = [
 ];
 
 const buttondownEndpoint =
-  "https://buttondown.com/api/emails/embed-subscribe/adamalthus";
+  "https://buttondown.com/api/emails/embed-subscribe/attenstra";
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
