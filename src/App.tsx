@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import attenstraLogo from "../assets/Attenstra_Woirdmark_LightBlue_Stream_Transparent_Background.png";
-
-const heroStatements = [
-  "Keep what matters moving",
-  "Make focus your advantage",
-  "Tools that work the way you do",
-];
-
-const buttondownEndpoint =
-  "https://buttondown.com/api/emails/embed-subscribe/attenstra";
+import { AnimatedHeadline } from "./components/AnimatedHeadline";
+import { BrandFooter } from "./components/BrandFooter";
+import { SignupForm } from "./components/SignupForm";
+import { homepageCopy, heroStatements } from "./content/homepage";
+import { siteConfig } from "./config/site";
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,20 +22,10 @@ export default function App() {
     <div className="page">
       <main className="shell">
         <section className="hero-stack">
-          <div className="headline-frame">
-            <AnimatePresence mode="wait">
-              <motion.h2
-                key={currentIndex}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="headline"
-              >
-                {heroStatements[currentIndex]}
-              </motion.h2>
-            </AnimatePresence>
-          </div>
+          <AnimatedHeadline
+            currentIndex={currentIndex}
+            statements={heroStatements}
+          />
 
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -47,40 +33,21 @@ export default function App() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="subline-wrap"
           >
-            <p className="subline">
-              In a world of fragmented attention, make every second count.
-            </p>
+            <p className="subline">{homepageCopy.subline}</p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="signup-wrap"
           >
-            <form
-              action={buttondownEndpoint}
-              method="post"
-              className="signup"
-            >
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                required
-                className="email-input"
-              />
-              <input type="hidden" name="tag" value="attenstra-website" />
-              <input
-                type="hidden"
-                name="metadata__source"
-                value="attenstra.ai"
-              />
-              <input type="hidden" name="embed" value="1" />
-              <button type="submit" className="signup-button">
-                Get updates
-              </button>
-            </form>
+            <SignupForm
+              action={siteConfig.buttondownEndpoint}
+              source={homepageCopy.sourceTag}
+              tag={homepageCopy.buttondownTag}
+              emailPlaceholder={homepageCopy.emailPlaceholder}
+              ctaLabel={homepageCopy.ctaLabel}
+            />
           </motion.div>
         </section>
 
@@ -88,9 +55,8 @@ export default function App() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="brand-footer"
         >
-          <img src={attenstraLogo} alt="Attenstra" className="brand-logo" />
+          <BrandFooter src={attenstraLogo} alt="Attenstra" />
         </motion.div>
       </main>
     </div>
