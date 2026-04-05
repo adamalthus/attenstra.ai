@@ -2,7 +2,6 @@ import { useEffect, useState, type FormEvent } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 const heroStatements = [
-  "makes every second count",
   "keeps what matters moving",
   "makes focus your advantage",
   "powers serious work",
@@ -71,7 +70,9 @@ export default function App() {
             className="subline-wrap"
           >
             <p className="subline">
-              Built for serious work in a world of fragmented attention.
+              In a world of fragmented attention
+              <br />
+              Make every second count
             </p>
           </motion.div>
 
@@ -106,17 +107,6 @@ export default function App() {
             ) : null}
           </motion.div>
 
-          <div className="dots" aria-label="Hero statement selector">
-            {heroStatements.map((statement, index) => (
-              <button
-                key={statement}
-                type="button"
-                className={index === currentIndex ? "dot active" : "dot"}
-                onClick={() => setCurrentIndex(index)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
         </section>
 
         <motion.div
