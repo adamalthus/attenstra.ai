@@ -66,15 +66,6 @@ export default function App() {
     <div className="page">
       <main className="shell">
         <section className="hero-stack">
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="intro"
-          >
-            <p className="intro-line">Attenstra</p>
-          </motion.div>
-
           <div className="headline-frame">
             <AnimatePresence mode="wait">
               <motion.h2
@@ -120,7 +111,7 @@ export default function App() {
                 {isSubmitted ? "Thank you!" : "Get updates"}
               </button>
             </form>
-            <p className="signup-note">Early updates on Attenstra. No noise.</p>
+            <p className="signup-note">Early updates on Attenstra.</p>
             <p className="signup-status" aria-live="polite">
               {errorMessage || (isSubmitted ? "We’ll be in touch soon." : "")}
             </p>
